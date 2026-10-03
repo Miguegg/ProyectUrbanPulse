@@ -5,10 +5,11 @@ import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 public class KnowledgeDocument {
-    private Integer id;
+    private UUID id;
     private String code;
     private Integer versionNumber;
     private String title;

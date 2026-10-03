@@ -4,10 +4,11 @@ import lombok.Data;
 import urbanpulse.entity.UserEntity;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 public class Incident {
-    private Integer id;
+    private UUID id;
     private String title;
     private String description;
     private Category category;

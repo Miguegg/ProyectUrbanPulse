@@ -5,6 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 // Metadatos de un fichero; el fichero en sí se guarda fuera de la BD (RF05)
 @Getter
@@ -15,8 +16,8 @@ import java.time.LocalDateTime;
 public class AttachmentEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "incident_id", nullable = false)

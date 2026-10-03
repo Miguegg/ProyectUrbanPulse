@@ -6,6 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import urbanpulse.dto.DocumentType;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 // Procedimiento o normativa versionada que puede indexarse para RAG.
 // Cada versión es una fila; code se repite entre versiones del mismo documento.
@@ -17,8 +18,8 @@ import java.time.LocalDateTime;
 public class KnowledgeDocumentEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @Column(nullable = false)
     private String code;

@@ -3,9 +3,11 @@ package urbanpulse.dto;
 import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 @Data
 public class UrbanContext {
+    private UUID id;
     private Incident incident;
     // TODO: District será una tabla
     private District district;

@@ -8,6 +8,7 @@ import urbanpulse.dto.District;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 // Contexto urbano de una incidencia o de una zona en un instante (RF24, RF17).
 // Tiene que venir relleno al menos uno: incident o district.
@@ -19,8 +20,8 @@ import java.util.List;
 public class UrbanContextEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     // Null si es un contexto de zona
     @ManyToOne(fetch = FetchType.LAZY)

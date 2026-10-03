@@ -10,6 +10,7 @@ import urbanpulse.dto.IncidentStatus;
 import urbanpulse.dto.Priority;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -19,8 +20,8 @@ import java.time.LocalDateTime;
 public class IncidentEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @Column(nullable = false)
     private String title;

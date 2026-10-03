@@ -3,10 +3,11 @@ package urbanpulse.dto;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 public class UrbanAsset {
-    private Integer id;
+    private UUID id;
     private AssetType assetType;
     private ExternalSource externalSource;
     private String externalId;
